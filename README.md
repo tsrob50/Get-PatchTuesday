@@ -1,2 +1,2 @@
 # Get-PatchTuesday
-Function to find patch Tuesday in the current month.
+Patching is important, but automating updates can be difficult due to patching releases on the second Tuesday of the month.  The code in this repo is an example of how to identify the date of the second Tuesday for a given month.  The purpose is to use in a script or automation to schedule maintenance windows for patching.   The script will output the second Tuesday of the month by default.   Optionally, you can pass in a week day and an instance count to find what date that day falls on.
