@@ -10,6 +10,18 @@
 .OUTPUTS
   The date of patch Tuesday.
   If given optioaly parameters, it will find the “X” instance of a day of the week.
+.EXAMPLE
+  Get Patch Tuesday for the month
+  Get-PatchTuesday
+
+  Is today Patch Tuesday?
+  (get-date).Day -eq (Get-PatchTuesday).day
+
+  Get 5 days after path Tuesday
+  (Get-PatchTuesday).AddDays(5)
+
+# Get the 3rd wednesday of the month
+Get-PatchTuesday -weekDay Wednesday -findNthDay 3
 .NOTES
   Version:        1.0
   Author:         Travis Roberts
@@ -55,17 +67,5 @@ Function Get-PatchTuesday {
   return $patchTuesday
 }
 
-#-----------------------------------------------------------[Examples]------------------------------------------------------------
 
-# Get Patch Tuesday for the month
-Get-PatchTuesday
-
-# Is today Patch Tuesday?
-(get-date).Day -eq (Get-PatchTuesday).day
-
-# Get 5 days after path Tuesday
-(Get-PatchTuesday).AddDays(5)
-
-# Get the 3rd wednesday of the month
-Get-PatchTuesday -weekDay Wednesday -findNthDay 3
 
