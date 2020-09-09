@@ -39,7 +39,7 @@ Function Get-PatchTuesday {
   Param
   (
     [Parameter(position = 0)]
-    [ValidateSet("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satureday")]
+    [ValidateSet("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")]
     [String]$weekDay = 'Tuesday',
     [ValidateRange(0, 5)]
     [Parameter(position = 1)]
